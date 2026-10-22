@@ -6,12 +6,16 @@
         xmlns:local="clr-namespace:G26W08WPFCounter"
         mc:Ignorable="d"
         Title="카운터" Height="450" Width="317">
-    <Grid>
+    <Grid Margin="-539,-220,-298,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="434*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/Images/diego-jimenez-A-NVHPka9Rk-unsplash.jpg"/>
         </Grid.Background>
-        <Button x:Name="BtnAdd" Content="증가" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" FontSize="24" Click="OnAdd" Width="297"/>
-        <TextBlock x:Name="TxtCount" HorizontalAlignment="Center" Height="68" Margin="0,113,0,0" TextWrapping="Wrap" Text="안녕하세요" VerticalAlignment="Top" Width="297" FontSize="48" TextAlignment="Center" Background="#FFEAEA64"/>
+        <Button x:Name="BtnAdd" Content="증가" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" FontSize="24" Click="OnAdd" Width="297" Grid.Row="1"/>
+        <TextBlock x:Name="TxtCount" HorizontalAlignment="Center" Height="68" Margin="0,112,0,0" TextWrapping="Wrap" Text="안녕하세요" VerticalAlignment="Top" Width="297" FontSize="48" TextAlignment="Center" Background="#FFEAEA64" Grid.Row="1"/>
 
     </Grid>
 </Window>
