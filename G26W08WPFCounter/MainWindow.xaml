@@ -10,9 +10,35 @@
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/Images/diego-jimenez-A-NVHPka9Rk-unsplash.jpg"/>
         </Grid.Background>
-        <Button x:Name="BtnAdd" Content="증가" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" FontSize="24" Click="OnAdd" Width="297"/>
-        <Button x:Name="BtnSub" Content="감소" HorizontalAlignment="Center" Margin="0,309,0,0" VerticalAlignment="Top" FontSize="24" Click="OnSub" Width="297"/>
-        <TextBlock x:Name="TxtCount" HorizontalAlignment="Center" Height="68" Margin="0,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" FontSize="48" TextAlignment="Center" Background="#FFEAEA64"><Run Language="ko-kr" Text="카운터"/><LineBreak/><Run Language="ko-kr"/><LineBreak/><Run Language="ko-kr" Text="터"/><LineBreak/><Run Language="ko-kr" Text="터"/><LineBreak/><Run Language="ko-kr"/><LineBreak/><Run Language="ko-kr" Text="운"/><LineBreak/><Run Language="ko-kr" Text="터"/><LineBreak/><Run Language="ko-kr"/></TextBlock>
-
+        <TextBlock 
+            x:Name="TxtCount" 
+            Text="{Binding Count, Mode=OneWay}"
+            HorizontalAlignment="Center" 
+            Height="68" 
+            Margin="0,113,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="297" 
+            FontSize="48" 
+            TextAlignment="Center" 
+            Background="#FFEAEA64"/>
+        <Button 
+            x:Name="BtnAdd" 
+            Content="증가" 
+            Command="{Binding IncrementCommand}"
+            HorizontalAlignment="Center" 
+            Margin="0,249,0,0" 
+            VerticalAlignment="Top" 
+            FontSize="24" 
+            Width="297"/>
+        <Button 
+            x:Name="BtnSub" 
+            Content="감소" 
+            Command="{Binding DecrementCommand}"
+            HorizontalAlignment="Center" 
+            Margin="0,309,0,0" 
+            VerticalAlignment="Top" 
+            FontSize="24" 
+            Width="297"/>
     </Grid>
 </Window>
