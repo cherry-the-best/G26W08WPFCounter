@@ -12,7 +12,7 @@
         </Grid.Background>
         <TextBlock 
             x:Name="TxtCount" 
-            Text="{Binding Count, Mode=OneWay}"
+            Text="{Binding Count, Mode=OneWay}"              {Binding Count} 중요 
             HorizontalAlignment="Center" 
             Height="68" 
             Margin="0,113,0,0" 
